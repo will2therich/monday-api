@@ -40,11 +40,11 @@ class MondayAPI
 
     protected function request( $type = self::TYPE_QUERY, $request = null )
     {
-        set_error_handler(
-            function ($severity, $message, $file, $line) {
-                throw new \ErrorException($message, $severity, $severity, $file, $line);
-            }
-        );
+        // set_error_handler(
+        //     function ($severity, $message, $file, $line) {
+        //         throw new \ErrorException($message, $severity, $severity, $file, $line);
+        //     }
+        // );
 
         try {
             $headers = [
