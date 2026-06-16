@@ -32,20 +32,20 @@ class Item extends ObjectModel
     );
 
     static $create_item_arguments = array(
-        'board_id'      => 'Int',
+        'board_id'      => 'ID',
         'group_id'      => 'String',
         'item_name'     => 'String',
         'column_values' => '!JSON',
     );
 
     static $change_multiple_column_values = array(
-        'board_id'        => '!Int',
-        'item_id'         => 'Int',
+        'board_id'        => '!ID',
+        'item_id'         => 'ID',
         'column_values'   => '!JSON',
     );
 
     static $archive_delete_arguments = array(
-        'item_id'         => 'Int'
+        'item_id'         => 'ID'
     );
 }
 

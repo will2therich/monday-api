@@ -47,13 +47,13 @@ class Board extends ObjectModel
     );
 
     static $change_multiple_column_values = array(
-        'board_id'        => '!Int',
-        'item_id'         => 'Int',
+        'board_id'        => '!ID',
+        'item_id'         => 'ID',
         'column_values'   => '!JSON',
     );
 
     static $archive_arguments = array(
-        'board_id'         => '!Int'
+        'board_id'         => '!ID'
     );
 }
 

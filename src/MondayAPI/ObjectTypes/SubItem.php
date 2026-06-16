@@ -34,7 +34,7 @@ class SubItem extends ObjectModel
     );
 
     static $create_item_arguments = array(
-        'parent_item_id'  => 'Int',
+        'parent_item_id'  => 'ID',
         'item_name'       => 'String',
         'column_values'   => '!JSON',
     );
