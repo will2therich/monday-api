@@ -58,7 +58,24 @@ class MondayBoard extends MondayAPI
         return $this->request(self::TYPE_MUTAT, $create);
     }
 
-    public function getBoards( Array $arguments = [], Array $fields = [])
+    public function deleteBoard( Array $fields = [] )
+    {
+        $Board = new Board();
+
+        $arguments = [
+            'board_id'      => $this->board_id,
+        ];
+
+        $create = Query::create(
+            'delete_board',
+            $Board->getArguments($arguments, Board::$archive_arguments),
+            $Board->getFields($fields)
+        );
+
+        return $this->request(self::TYPE_MUTAT, $create);
+    }
+
+    public function getBoards( Array $arguments = [], Array $fields = ['id' , 'name'])
     {
         $Board = new Board();
 
